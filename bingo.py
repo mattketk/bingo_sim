@@ -35,9 +35,9 @@ def check_bingo(bc):
     called = bc[:, :, 1]
     n = called.shape[0]
     win_vector = np.ones(n)
-    if (called @ win_vector).sum() >= n:
+    if (called @ win_vector).max() >= n:
         return 1
-    elif (called.T @ win_vector).sum() >= n:
+    elif (called.T @ win_vector).max() >= n:
         return 1
     elif np.trace(called) >= n:
         return 1
