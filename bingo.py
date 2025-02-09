@@ -45,3 +45,20 @@ def check_bingo(bc):
         return 1
     else:
         return 0
+
+def round_pick(bc_arr, min_entry=1, max_entry=50):
+    '''
+        Pick a random integer between min_entry and max_entry. If a bingo card has the random integer
+        as an entry, change the corresponding entry in the called layer to a 1.
+
+        bc : arraylike
+            Bingo card.
+        min_entry=1 : int
+            The minimum integer an entry can be.
+
+        max_entry=1 : int
+            The maximum integer (inclusive) an entry can be.
+
+        return : (?)
+    '''
+    pass
