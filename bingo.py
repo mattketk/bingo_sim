@@ -19,7 +19,7 @@ def bingo_card(n, min_entry=1, max_entry=50):
     '''
     entries_layer = np.random.randint(low=min_entry, high=max_entry+1, size=(n, n))
     called_layer = np.zeros((n, n))
-    return np.dstack(entries_layer, called_layer)
+    return np.dstack((entries_layer, called_layer))
 
 def check_bingo(bc):
     '''
@@ -48,7 +48,8 @@ def check_bingo(bc):
 
 def round_pick(bc_arr, min_entry=1, max_entry=50):
     '''
-        Pick a random integer between min_entry and max_entry. If a bingo card has the random integer
+        Pick a random integer between min_entry and max_entry and a random integer between 1 and n 
+        (the length of the bingo card.) If a bingo card has the random integer
         as an entry, change the corresponding entry in the called layer to a 1.
 
         bc : arraylike
